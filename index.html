@@ -6,29 +6,29 @@
     <title>Calculator</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <main>
-      <section class="calc">
-        <input type="text" id="display" disabled />
-        <div class="buttons">
-          <button onclick="appendNamber('7')">7</button>
-          <button onclick="appendNamber('8')">8</button>
-          <button onclick="appendNamber('9')">9</button>
-          <button onclick="appendOperator('+')">+</button>
-          <button onclick="appendNamber('4')">4</button>
-          <button onclick="appendNamber('5')">5</button>
-          <button onclick="appendNamber('6')">6</button>
-          <button onclick="appendOperator('-')">-</button>
-          <button onclick="appendNamber('1')">1</button>
-          <button onclick="appendNamber('2')">2</button>
-          <button onclick="appendNamber('3')">3</button>
-          <button onclick="appendOperator('*')">*</button>
-          <button onclick="appendNamber('0')">0</button>
-          <button onclick="appendNamber('.')">.</button>
-          <button onclick="calculate()">=</button>
-          <button onclick="appendOperator('/')">/</button>
-          <button onclick="clearDisplay()">C</button>
-          <button onclick="deleteLast()">DEL</button>
+      <section class="bg-white p-6 rounded-lg shadow-lg w-80">
+        <input type="text" id="display" disabled class="w-full mb-6 p-4 text-right text-2xl font-mono border-2 border-gray-300 rounded-lg bg-gray-50 focus:outline-none" />
+        <div class="grid grid-cols-4 gap-4">
+          <button onclick="clearDisplay()" class="bg-red-500 text-white p-4 rounded-lg hover:bg-red-600 transition">C</button>
+          <button onclick="deleteLast()" class="bg-gray-400 text-white p-4 rounded-lg hover:bg-gray-500 transition">DEL</button>
+          <button onclick="appendOperator('/')" class="bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600 transition">/</button>
+          <button onclick="appendOperator('*')" class="bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600 transition">*</button>
+          <button onclick="appendNamber('7')" class="bg-gray-200 text-gray-800 p-4 rounded-lg hover:bg-gray-300 transition">7</button>
+          <button onclick="appendNamber('8')" class="bg-gray-200 text-gray-800 p-4 rounded-lg hover:bg-gray-300 transition">8</button>
+          <button onclick="appendNamber('9')" class="bg-gray-200 text-gray-800 p-4 rounded-lg hover:bg-gray-300 transition">9</button>
+          <button onclick="appendOperator('-')" class="bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600 transition">-</button>
+          <button onclick="appendNamber('4')" class="bg-gray-200 text-gray-800 p-4 rounded-lg hover:bg-gray-300 transition">4</button>
+          <button onclick="appendNamber('5')" class="bg-gray-200 text-gray-800 p-4 rounded-lg hover:bg-gray-300 transition">5</button>
+          <button onclick="appendNamber('6')" class="bg-gray-200 text-gray-800 p-4 rounded-lg hover:bg-gray-300 transition">6</button>
+          <button onclick="appendOperator('+')" class="bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600 transition">+</button>
+          <button onclick="appendNamber('1')" class="bg-gray-200 text-gray-800 p-4 rounded-lg hover:bg-gray-300 transition">1</button>
+          <button onclick="appendNamber('2')" class="bg-gray-200 text-gray-800 p-4 rounded-lg hover:bg-gray-300 transition">2</button>
+          <button onclick="appendNamber('3')" class="bg-gray-200 text-gray-800 p-4 rounded-lg hover:bg-gray-300 transition">3</button>
+          <button onclick="calculate()" class="bg-green-500 text-white p-4 rounded-lg hover:bg-green-600 transition">=</button>
+          <button onclick="appendNamber('0')" class="bg-gray-200 text-gray-800 p-4 rounded-lg hover:bg-gray-300 transition col-span-2">0</button>
+          <button onclick="appendNamber('.')" class="bg-gray-200 text-gray-800 p-4 rounded-lg hover:bg-gray-300 transition">.</button>
         </div>
       </section>
     </main>
